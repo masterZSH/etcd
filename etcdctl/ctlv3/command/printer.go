@@ -183,7 +183,7 @@ func makeMemberListTable(r v3.MemberListResponse) (hdr []string, rows [][]string
 			isLearner,
 		})
 	}
-	return hdr, rows
+	return 
 }
 
 func makeEndpointHealthTable(healthList []epHealth) (hdr []string, rows [][]string) {
@@ -196,7 +196,7 @@ func makeEndpointHealthTable(healthList []epHealth) (hdr []string, rows [][]stri
 			h.Error,
 		})
 	}
-	return hdr, rows
+	return 
 }
 
 func makeEndpointStatusTable(statusList []epStatus) (hdr []string, rows [][]string) {
@@ -216,7 +216,7 @@ func makeEndpointStatusTable(statusList []epStatus) (hdr []string, rows [][]stri
 			fmt.Sprint(strings.Join(status.Resp.Errors, ", ")),
 		})
 	}
-	return hdr, rows
+	return 
 }
 
 func makeEndpointHashKVTable(hashList []epHashKV) (hdr []string, rows [][]string) {
@@ -227,7 +227,7 @@ func makeEndpointHashKVTable(hashList []epHashKV) (hdr []string, rows [][]string
 			fmt.Sprint(h.Resp.Hash),
 		})
 	}
-	return hdr, rows
+	return 
 }
 
 func makeDBStatusTable(ds snapshot.Status) (hdr []string, rows [][]string) {
@@ -238,5 +238,5 @@ func makeDBStatusTable(ds snapshot.Status) (hdr []string, rows [][]string) {
 		fmt.Sprint(ds.TotalKey),
 		humanize.Bytes(uint64(ds.TotalSize)),
 	})
-	return hdr, rows
+	return 
 }
